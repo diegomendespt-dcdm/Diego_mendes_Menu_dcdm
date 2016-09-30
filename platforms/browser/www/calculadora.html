@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="app" id="menu_principal">
+        <span id="back_arrow">
+            <a href="index.html">
+                <img src="img/icons/ic_keyboard_arrow_left_white_24px.svg" alt="">
+            </a>
+        </span>
+        <div id="header_bar">
+            <h1>Calculadora</h1>
+        </div>
+        <div id="div_calc">
+            <form id="form1">
+                <input id="mostrador" type="text" name="mostra" value="" placeholder="">
+
+                <div id="calc_bs">
+                    <input type="button" name="b1" value="1" onClick="form1.mostra.value+='1'">
+                    <input type="button" name="b2" value="2" onClick="form1.mostra.value+='2'">
+                    <input type="button" name="b3" value="3" onClick="form1.mostra.value+='3'">
+                    <input type="button" name="b_plus" value="+" onClick="form1.mostra.value+='+'">
+                    <input type="button" name="b4" value="4" onClick="form1.mostra.value+='4'">
+                    <input type="button" name="b5" value="5" onClick="form1.mostra.value+='5'">
+                    <input type="button" name="b6" value="6" onClick="form1.mostra.value+='6'">
+                    <input type="button" name="b_minus" value="-" onClick="form1.mostra.value+='-'">
+                    <input type="button" name="b7" value="7" onClick="form1.mostra.value+='7'">
+                    <input type="button" name="b8" value="8" onClick="form1.mostra.value+='8'">
+                    <input type="button" name="b9" value="9" onClick="form1.mostra.value+='9'">
+                    <input type="button" name="b_multi" value="X" onClick="form1.mostra.value+='*'">
+                    <input type="button" name="b_clear" value="C" onClick="form1.mostra.value = ''">
+                    <input type="button" name="b0" value="0" onClick="form1.mostra.value+='0'">
+                    <input type="button" name="b_equal" value="=" onClick="form1.mostra.value = eval(form1.mostra.value)">
+                    <input type="button" name="b_divide" value="&divide;" onClick="form1.mostra.value+='/'">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/calculadora.js"></script>
+    <script type="text/javascript">
+    app.initialize();
+    </script>
+</body>
+
+</html>
